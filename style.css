@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;700;800&family=Montserrat:ital,wght@0,100;0,300;1,200;1,300;1,400;1,500&display=swap');
+
+
+* {
+    font-family: sans-serif;
+
+}
+
+/* collapsed sidebar endbo*/
+.nav-link:hover{
+ background-color: #929292 !important;
+}
+.margin-list {
+    margin: 10px;
+}
+
+.text-color-gray {
+    color: #2A3F54;
+}
+
+.bg-gray {
+    background-color: #F1F1F1;
+}
+
+.cm-font-3 {
+    font-size: 64px;
+}
+
+.font-inter {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+
+.img-size {
+    width: 24px;
+    height: auto;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #1C2936 !important;
+}
+
+.cm-img-profile {
+    height: 120px;
+    width: auto;
+}
+
+.cm-icon {
+    height: 20px;
+    width: auto;
+    font-size: 14px;
+}
+
+.cm-navtext {
+    font-size: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+
+
+}
+
+.cm-card-border {
+    border-radius: 15px !important;
+}
+
+.cm-navtextmain {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #929292;
+
+
+}
+
+#cm-bg-nav {
+    background-color: #2A3F54 !important;
+}
+
+.cm-hr {
+    color: black !important;
+    height: 2px !important;
+}
+
+.cm-notification {
+    height: 20px;
+    width: auto;
+    color: rgb(42, 63, 84);
+}
+
+.cm-bg-table-color {
+    background-color: #2A3F54;
+}
+
+.cm-right-wrong {
+    height: 20px;
+
+}
+
+.cm-form-control {
+    color: #212529;
+    background-color: transparent !important;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+
+.cm-gradient {
+
+    height: 200px;
+    background-color: white;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(#00061F, #00156A);
+    border-radius: 26px;
+
+
+}
+
+
+/* job application css*/
+.cm-bg-construction{
+    background-color: #f1f1f1;
+    height: 200px;
+    padding: 25px;
+    border-radius: 26px;
+}
+
+.cm-brder-btm:hover{
+    border-bottom: 2px solid #2a3f54;
+}
+
+
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    transition: all 0.3s;
+    background-color: #2A3F54 !important;;
+}
+
+.navbar {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+   
+}
+
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+  
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 250px);
+    background-color: #DDDDDD ;
+   
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#g {
+    width: 100%;
+}
+
+#content.active {
+    width: 100%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
